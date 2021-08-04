@@ -6,6 +6,7 @@ import './App.css';
 function App() {
   return (
     <div>
+      <p>This is my first calculator app in React</p>
       <Display />
       <ButtonPanel />
     </div>
