@@ -1,11 +1,13 @@
+import React from 'react';
+import Display from './Display';
+import ButtonPanel from './ButtonPanel';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Math Magicians Setup</h1>
-      </header>
+    <div>
+      <Display />
+      <ButtonPanel />
     </div>
   );
 }
