@@ -6,15 +6,18 @@ import calculate from '../logic/calulate';
 
 const App = () => {
   const initCal = {
-    total: '0',
-    next: '0',
+    total: '5',
+    next: '5',
     operation: '',
   };
+  return (
 
     <div>
-      <Display result="calculations" />
+      <Display result={calculate(initCal, '').total.toString()} />
       <ButtonPanel />
-    </div>;
+    </div>
+
+  );
 };
 
 export default App;
