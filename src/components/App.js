@@ -10,9 +10,12 @@ class App extends Component {
     this.state.total = 'null';
     this.state.next = 'null';
     this.state.operation = 'null';
+
+    this.handleClick = () => `${this.total},${this.next}. ${this.operation}`;
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div>
         <Display result={calculate('').total.toString()} />
