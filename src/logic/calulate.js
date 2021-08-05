@@ -1,8 +1,10 @@
-import React from 'react';
-import Big from 'big.js';
-
 function calculate(calDataObj, btnName) {
-  const { total, next, operation } = calDataObj;
+  let { total, next } = calDataObj;
+  if (btnName === '+/-') {
+    total *= -1;
+    next *= -1;
+  }
+  return { total, next };
 }
 
 export default calculate;
