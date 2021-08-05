@@ -22,7 +22,13 @@ class App extends Component {
   }
 
   render() {
-    const { total, next, operation } = this.state;
+    const { total, next } = this.state;
+    let currentResult = total;
+    while (next) {
+      currentResult = next;
+    }
+ 
+
     return (
       <div>
         <Display result={calculate('').total.toString()} />
