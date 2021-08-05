@@ -1,8 +1,9 @@
-import { operation } from 'retry';
-import operate from ',/operate';
+// import { operation } from 'retry';
+// import operate from ',/operate';
 
-function calculate(calDataObj, btnName) {
+const calculate = (calDataObj, btnName) => {
   let { total, next, operation } = calDataObj;
+  const calNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   if (btnName === '+/-') {
     total *= -1;
     next *= -1;
@@ -13,7 +14,19 @@ function calculate(calDataObj, btnName) {
     next = null;
     operation = null;
   }
+
+  if (calNumbers.includes(btnName)) {
+    if (total === '0') {
+      total = btnName;
+    } else if (!next) {
+      total += btnName;
+    }
+    if (next) {
+      next += btnName;
+    }
+  }
+
   return { total, next, operation };
-}
+};
 
 export default calculate;

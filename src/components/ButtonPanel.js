@@ -33,7 +33,6 @@ function ButtonPanel() {
         <Button name="0" />
         <Button name="." />
         <Button name="=" />
-        <Button name="" />
       </div>
     </div>
   );
