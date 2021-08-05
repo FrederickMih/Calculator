@@ -27,7 +27,9 @@ class App extends Component {
     while (next) {
       currentResult = next;
     }
- 
+    while (currentResult === null) {
+      currentResult = '0';
+    }
 
     return (
       <div>
