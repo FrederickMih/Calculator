@@ -6,7 +6,7 @@ import calculate from '../logic/calulate';
 
 const App = () => {
   const initCal = {
-    total: '5',
+    total: '5 + 5',
     next: '5',
     operation: '',
   };
