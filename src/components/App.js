@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../App.css';
 import calculate from '../logic/calulate';
 
-const App = () => {
-  const initCal = {
-    total: '5 + 5',
-    next: '5',
-    operation: '',
-  };
-  return (
+class App extends Component {
+  constructor(props) {
+    super(props);
+   
+  }
 
-    <div>
-      <Display result={calculate(initCal, '').total.toString()} />
-      <ButtonPanel />
-    </div>
-
-  );
-};
+  render() {
+    return (
+      <div>
+        <Display result={calculate('').total.toString()} />
+        <ButtonPanel />
+      </div>
+    );
+  }
+}
 
 export default App;
