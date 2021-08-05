@@ -7,9 +7,11 @@ import calculate from '../logic/calulate';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state.total = 'null';
-    this.state.next = 'null';
-    this.state.operation = 'null';
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+    };
 
     this.handleClick = () => `${this.total},${this.next}. ${this.operation}`;
   }
@@ -33,8 +35,8 @@ class App extends Component {
 
     return (
       <div>
-        <Display result={calculate('').total.toString()} />
-        <ButtonPanel />
+        <Display result={currentResult.toString()} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }
