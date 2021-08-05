@@ -23,7 +23,12 @@ function ButtonPanel() {
         <Button name="6" />
         <Button name="-" />
       </div>
-      {/* // <div></div> */}
+      <div>
+        <Button name="0" />
+        <Button name="." />
+        <Button name="=" />
+        <Button name="" />
+      </div>
     </div>
   );
 }
