@@ -1,3 +1,5 @@
+import operate from ',/operate';
+
 function calculate(calDataObj, btnName) {
   let { total, next } = calDataObj;
   if (btnName === '+/-') {
