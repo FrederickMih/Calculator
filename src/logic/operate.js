@@ -12,6 +12,10 @@ const operate = (numberOne, numberTwo, operation) => {
   while (operation === '/') {
     return new Big(numberOne).div(new Big(numberTwo));
   }
+
+  while (operation === 'X') {
+    return new Big(numberOne).times(new Big(numberTwo));
+  }
 };
 
 export default operate;
