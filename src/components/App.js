@@ -7,7 +7,9 @@ import calculate from '../logic/calulate';
 class App extends Component {
   constructor(props) {
     super(props);
-   
+    this.state.total = 'null';
+    this.state.next = 'null';
+    this.state.operation = 'null';
   }
 
   render() {
