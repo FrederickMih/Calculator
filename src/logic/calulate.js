@@ -1,7 +1,7 @@
 // import { operation } from 'retry';
 // import operate from ',/operate';
 
-const calculate = (calDataObj, btnName) => {
+const calculate = (calDataObj, btnName) => { // btnName is the clickable button
   let { total, next, operation } = calDataObj;
   const calNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   if (btnName === '+/-') {
@@ -23,6 +23,14 @@ const calculate = (calDataObj, btnName) => {
     }
     if (next) {
       next += btnName;
+    }
+  }
+
+  if (btnName === '.') {
+    if (next) {
+      next += '.';
+    } else {
+      total += '.';
     }
   }
 
