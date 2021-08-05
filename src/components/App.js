@@ -14,6 +14,13 @@ class App extends Component {
     this.handleClick = () => `${this.total},${this.next}. ${this.operation}`;
   }
 
+  handleClick(btnName) {
+    const calDataObj = calculate(this.state, btnName);
+    this.setState(
+      calDataObj,
+    );
+  }
+
   render() {
     const { total, next, operation } = this.state;
     return (
