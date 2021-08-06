@@ -4,7 +4,6 @@ import Button from './Button';
 //
 function ButtonPanel(props) {
   const handleClick = (btnName) => props.clickHandler(btnName);
-  // Should render the calculator panel with all Buttons
   return (
     <div>
       <div>
