@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from './Button';
+import React from "react";
+import PropTypes from "prop-types";
+import Button from "./Button";
 
-//
 function ButtonPanel(props) {
   const handleClick = (btnName) => props.clickHandler(btnName);
   return (
-    <div>
+    <>
       <div>
         <Button name="AC" />
         <Button name="+/-" />
@@ -35,8 +35,13 @@ function ButtonPanel(props) {
         <Button name="." />
         <Button name="=" />
       </div>
-    </div>
+    </>
   );
 }
+
+// Passing clickHandler property to each button
+ButtonPanel.prototype = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

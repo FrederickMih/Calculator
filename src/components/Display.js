@@ -6,7 +6,7 @@ function Display(props) {
   return (
     <div>
       <h2>
-        result:
+        Result:
         {result}
       </h2>
     </div>
