@@ -1,10 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Button(props) {
   const { name } = props;
+  const handleClick = (btnName) => props.clickHandler(btnName);
+
   return (
-    <button className="button" type="button">
+    <button className="btn" type="button" onClick={handleClick(name)}>
       {name}
     </button>
   );
