@@ -10,14 +10,20 @@ const operate = (numberOne, numberTwo, operation) => {
   }
 
   while (operation === '/') {
-    return new Big(numberOne).div(new Big(numberTwo));
+    return new Big(numberTwo) === '0'
+      ? '0'
+      : new Big(numberOne).div(new Big(numberTwo));
   }
 
   while (operation === 'X') {
     return new Big(numberOne).times(new Big(numberTwo));
   }
 
-  return new Big(numberOne).times(new Big(numberTwo)).div(100);
+  while (operation === '%') {
+    return numberTwo === null || numberTwo === '0' ? '0' : ((new Big(numberOne)).times(new Big(numberTwo)).div(100));
+  }
+
+  return new Big(numberOne);
 };
 
 export default operate;
