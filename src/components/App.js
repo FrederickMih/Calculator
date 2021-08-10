@@ -12,12 +12,14 @@ class App extends React.Component {
       next: null,
       operation: null,
     };
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick = (btnName) => {
+  handleClick(btnName) {
     const calDataObj = calculate(this.state, btnName);
     this.setState(calDataObj);
-  };
+  }
 
   render() {
     const { total, next } = this.state;
