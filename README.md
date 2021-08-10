@@ -2,7 +2,7 @@
 
 ## Description
 
-Calculator setup
+Calculator Milestone 5
 
 ## Built With
 
