@@ -2,7 +2,7 @@
 
 ## Description
 
-Calculator setup built with react.
+Calculator built with react.
 
 ## Built With
 
