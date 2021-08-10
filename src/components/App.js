@@ -32,10 +32,10 @@ class App extends React.Component {
     }
 
     return (
-      <>
+      <div>
         <Display result={currentResult.toString()} />
         <ButtonPanel clickHandler={this.handleClick} />
-      </>
+      </div>
     );
   }
 }
