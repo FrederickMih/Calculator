@@ -55,7 +55,15 @@ const calculate = (calDataObj, btnName) => {
     }
   }
 
-
+  if (btnName === '=') {
+    if (!total && !next) {
+      total = '0';
+    }
+    if (total && next && operation) {
+      total = operate(total, next, operation).toString();
+      next = null;
+    }
+  }
 
   return { total, next, operation };
 };
