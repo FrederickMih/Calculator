@@ -13,14 +13,12 @@ class App extends Component {
       operation: null,
     };
 
-    this.handleClick = () => `${this.total},${this.next}. ${this.operation}`;
+    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(btnName) {
     const calDataObj = calculate(this.state, btnName);
-    this.setState(
-      calDataObj,
-    );
+    this.setState(calDataObj);
   }
 
   render() {

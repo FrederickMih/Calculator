@@ -17,7 +17,7 @@ const operate = (numberOne, numberTwo, operation) => {
     return new Big(numberOne).times(new Big(numberTwo));
   }
 
-  return (new Big(numberOne).times(new Big(numberTwo))).div(100);
+  return new Big(numberOne).times(new Big(numberTwo)).div(100);
 };
 
 export default operate;

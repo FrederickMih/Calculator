@@ -1,12 +1,18 @@
 import operate from './operate';
 
-const calculate = (calDataObj, btnName) => { // btnName is the clickable button
+const calculate = (calDataObj, btnName) => {
+  // btnName is the clickable button
   let { total, next, operation } = calDataObj;
   const calNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   const operator = ['X', '%', '+', '/', '-'];
   if (btnName === '+/-') {
-    total *= -1;
-    next *= -1;
+    if (next && next !== 0) {
+      next *= -1;
+      next = next.tostring();
+    } else {
+      total *= -1;
+      total = total.tostring();
+    }
   }
 
   if (btnName === 'AC') {
@@ -16,20 +22,21 @@ const calculate = (calDataObj, btnName) => { // btnName is the clickable button
   }
 
   if (calNumbers.includes(btnName)) {
-    if (total === '0') {
+    if (!total) {
       total = btnName;
-    } else if (!next) {
+    } else if (total && !operation) {
       total += btnName;
-    }
-    if (next) {
+    } else if (!next) {
+      next = btnName;
+    } else if (operation && total) {
       next += btnName;
     }
   }
 
   if (btnName === '.') {
-    if (next) {
+    if (next && !next.includes('.')) {
       next += '.';
-    } else {
+    } else if (total && total.includes('.')) {
       total += '.';
     }
   }
