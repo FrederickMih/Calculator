@@ -4,7 +4,7 @@ const calculate = (calDataObj, btnName) => {
   // btnName is the clickable button
   let { total, next, operation } = calDataObj;
   const calNumbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-  const operator = ['X', '+', '/', '-', '='];
+  const operator = ['x', '+', '÷', '-', '='];
   if (btnName === '+/-') {
     if (next && next !== 0) {
       next *= -1;
@@ -37,7 +37,7 @@ const calculate = (calDataObj, btnName) => {
     total /= 100;
   } else if (btnName === '%' && (operation === '+' || operation === '-')) {
     next = (total * next) / 100;
-  } else if (btnName === '%' && (operation === 'X' || operation === '/')) {
+  } else if (btnName === '%' && (operation === 'x' || operation === '÷')) {
     next /= 100;
   }
 
@@ -52,6 +52,14 @@ const calculate = (calDataObj, btnName) => {
       total = operate(total, next, operation).toString();
       next = null;
       operation = btnName;
+    }
+  }
+
+  if (btnName === '.') {
+    if (next && !next.includes('.')) {
+      next += '.';
+    } else if (total && !total.includes('.')) {
+      total += '.';
     }
   }
 
