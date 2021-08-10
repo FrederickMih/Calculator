@@ -38,7 +38,7 @@ const calculate = (calDataObj, btnName) => {
   } else if (btnName === '%' && (operation === '+' || operation === '-')) {
     next = (total * next) / 100;
   } else if (btnName === '%' && (operation === 'x' || operation === '÷')) {
-    next = next/100;
+    next /= 100;
   }
 
   if (mathOperator.includes(btnName)) {
