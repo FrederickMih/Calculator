@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../App.css';
 import calculate from '../logic/calulate';
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,18 +24,18 @@ class App extends Component {
   render() {
     const { total, next } = this.state;
     let currentResult = total;
-    while (next) {
+    if (next) {
       currentResult = next;
     }
-    while (currentResult === null) {
+    if (currentResult === null) {
       currentResult = '0';
     }
 
     return (
-      <div>
+      <>
         <Display result={currentResult.toString()} />
         <ButtonPanel clickHandler={this.handleClick} />
-      </div>
+      </>
     );
   }
 }
