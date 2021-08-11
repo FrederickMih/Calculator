@@ -2,7 +2,7 @@
 
 ## Description
 
-Calculator Milestone 5
+Calculator built with react.
 
 ## Built With
 
