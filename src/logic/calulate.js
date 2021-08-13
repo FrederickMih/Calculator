@@ -35,12 +35,7 @@ const calculate = (calDataObj, btnName) => {
 
   if (btnName === '%' && (next === null || next === '0')) {
     total /= 100;
-  } else if (btnName === '%' && (operation === '+' || operation === '-')) {
-    next = (total * next) / 100;
-  } else if (btnName === '%' && (operation === 'x' || operation === '÷')) {
-    next /= 100;
   }
-
   if (mathOperator.includes(btnName)) {
     if (!total) {
       total = 0;
