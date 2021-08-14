@@ -10,9 +10,10 @@ const App = () => {
   const [operation, setOperation] = useState(null);
 
   const handleClick = (btnName) => {
-    setTotal(calculate(total, btnName));
-    setNext(calculate(next, btnName));
-    setOperation(calculate(operation, btnName));
+    const result = calculate({ total, next, operation }, btnName);
+    setTotal(result.total);
+    setNext(result.next);
+    setOperation(result.operation);
   };
 
   let currentResult = total;
