@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Button(props) {
+const Button = (props) => {
   const { name } = props;
   const handleClick = (btnName) => props.clickHandler(btnName);
 
@@ -10,7 +10,7 @@ function Button(props) {
       {name}
     </button>
   );
-}
+};
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
