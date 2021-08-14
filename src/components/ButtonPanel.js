@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 
-function ButtonPanel(props) {
+const ButtonPanel = (props) => {
   // eslint-disable-next-line react/prop-types
   const handleClick = (btnName) => props.clickHandler(btnName);
   return (
@@ -38,7 +38,7 @@ function ButtonPanel(props) {
       </div>
     </>
   );
-}
+};
 
 ButtonPanel.prototype = {
   clickHandler: PropTypes.func.isRequired,
