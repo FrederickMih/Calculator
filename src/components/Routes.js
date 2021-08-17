@@ -17,6 +17,9 @@ const ReactRouterSetup = () => (
       <Route exact path="/">
         <Home />
       </Route>
+      <Route exact path="/home">
+        <Home />
+      </Route>
       <Route path="/app">
         <App />
       </Route>

@@ -2,13 +2,12 @@
   display: inline-block;
   background: hsl(205, 78%, 60%);
   color: #fff;
-  padding: 0.25rem 0.75rem;
+  /* padding: 0.25rem 0.75rem; */
   border-radius: 0.25rem;
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   letter-spacing: 0.1rem;
-  margin-top: 2rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   cursor: pointer;
