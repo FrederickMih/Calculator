@@ -11,7 +11,7 @@ const Button = (props) => {
 
   return (
     <button
-      className={name === '0' ? 'button zero-button' : 'button'}
+      className={name === '0' ? 'button exceptional-button' : 'button'}
       type="button"
       style={styles}
       onClick={() => handleClick(name)}

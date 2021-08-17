@@ -1,3 +1,10 @@
 .buttton {
   width: 25%;
+  text-align: center;
+  color: black;
+  /* padding: 1rem; */
+}
+
+.exceptional-button {
+  width: 50%;
 }
