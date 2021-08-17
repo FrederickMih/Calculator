@@ -6,4 +6,5 @@
   padding: 0.6rem 1rem;
   flex-flow: row-reverse;
   background-color: gray;
+  font-weight: bold;
 }
