@@ -5,8 +5,8 @@ import '../styles/Display.css';
 const Display = (props) => {
   const { result } = props;
   return (
-    <div>
-      <h2>{result}</h2>
+    <div className="app-display">
+      <h2 style={{ textAlign: 'center', fontSize: '3rem' }}>{result}</h2>
     </div>
   );
 };
