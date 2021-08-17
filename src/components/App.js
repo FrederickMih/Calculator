@@ -3,11 +3,12 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../App.css';
 import calculate from '../logic/calulate';
+import '../styles/App.css';
 
 const App = () => {
-  const [total, setTotal] = useState(undefined);
-  const [next, setNext] = useState(undefined);
-  const [operation, setOperation] = useState(undefined);
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
   const handleClick = (btnName) => {
     const result = calculate({ total, next, operation }, btnName);
