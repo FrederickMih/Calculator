@@ -1,0 +1,9 @@
+.app-main {
+  display: flex;
+  width: 100%;
+  color: white;
+  box-sizing: border-box;
+  padding: 0.6rem 1rem;
+  flex-flow: row-reverse;
+  background-color: gray;
+}
