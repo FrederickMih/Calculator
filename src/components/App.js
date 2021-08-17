@@ -27,8 +27,12 @@ const App = () => {
 
   return (
     <>
-      <Display result={currentResult.toString()} />
-      <ButtonPanel clickHandler={handleClick} />
+      <div className="app-main">
+        <div className="app">
+          <Display result={currentResult.toString()} />
+          <ButtonPanel clickHandler={handleClick} />
+        </div>
+      </div>
     </>
   );
 };
