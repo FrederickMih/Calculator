@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
+import '../styles/ButtonPanel.css';
 
 const ButtonPanel = (props) => {
   // eslint-disable-next-line react/prop-types
