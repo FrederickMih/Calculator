@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const Home = () => (
   <div
     style={{
       width: '75%',
@@ -19,7 +19,7 @@ const Home = () => {
       perspiciatis vitae, asperiores ullam ipsum consequuntur? Soluta quam
       ratione dolores!
     </p>
-  </div>;
-};
+  </div>
+);
 
 export default Home;

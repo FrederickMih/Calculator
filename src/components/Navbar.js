@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = () => (
   <div className="main-menu">
     <h3 className="menu-logo">
       <Link to="/">Math Magicians</Link>
@@ -11,7 +11,7 @@ const Navbar = () => {
       <Link to="/calculator">Calculator</Link>
       <Link to="/quote">Quote</Link>
     </div>
-  </div>;
-};
+  </div>
+);
 
 export default Navbar;
