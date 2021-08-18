@@ -6,7 +6,9 @@ const Display = (props) => {
   const { result } = props;
   return (
     <div className="app-display">
-      <h2 style={{ textAlign: 'right', fontSize: '3rem' }}>{result}</h2>
+      <h2 style={{ textAlign: 'right', fontSize: '3rem', marginRight: '1rem' }}>
+        {result}
+      </h2>
     </div>
   );
 };

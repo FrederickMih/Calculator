@@ -27,12 +27,11 @@ const App = () => {
 
   return (
     <div className="app-main">
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <h3>Fred's Calculator</h3>
       <div className="app">
         <Display result={currentResult.toString()} />
         <ButtonPanel clickHandler={handleClick} />
       </div>
+      <h3 className="fred">Fred’s Calculator</h3>
     </div>
   );
 };

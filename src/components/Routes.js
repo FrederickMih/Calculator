@@ -10,14 +10,11 @@ import Error from './Error';
 // navbar
 import Navbar from './Navbar';
 
-const ReactRouterSetup = () => (
+const Routes = () => (
   <Router>
     <Navbar />
     <Switch>
       <Route exact path="/">
-        <Home />
-      </Route>
-      <Route exact path="/home">
         <Home />
       </Route>
       <Route path="/app">
@@ -33,4 +30,4 @@ const ReactRouterSetup = () => (
   </Router>
 );
 
-export default ReactRouterSetup;
+export default Routes;
