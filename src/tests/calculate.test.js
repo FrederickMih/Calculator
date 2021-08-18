@@ -30,4 +30,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '7', next: '1', operation: '-' }, '-').total,
     ).not.toEqual('3');
   });
+
+  it('should multiply next with the total', () => {
+    expect(
+      calculate({ total: '10', next: '7', operation: 'x' }, 'x').total,
+    ).toEqual('70');
+  });
 });
