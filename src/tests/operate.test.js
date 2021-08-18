@@ -20,4 +20,15 @@ describe('aritmetic operations', () => {
   it('should multiply', () => {
     expect(JSON.stringify(operate(2, 3, 'x'))).toEqual(JSON.stringify('6'));
   });
+  it('should compute falsy mulplication', () => {
+    expect(JSON.stringify(operate(2, 3, 'x'))).not.toEqual(JSON.stringify('5'));
+  });
+  it('should compute division', () => {
+    expect(JSON.stringify(operate(20, 2, '÷'))).toEqual(JSON.stringify('10'));
+  });
+  it('should compute falsy division', () => {
+    expect(JSON.stringify(operate(20, 2, '÷'))).not.toEqual(
+      JSON.stringify('5')
+    );
+  });
 });
