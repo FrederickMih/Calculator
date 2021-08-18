@@ -6,4 +6,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '10', next: '11', operation: '+' }, '+').total,
     ).toEqual('21');
   });
+
+  it('negate sum', () => {
+    expect(
+      calculate({ total: '2', next: '-6', operation: '+' }, '+').total,
+    ).toEqual('-4');
+  });
 });
