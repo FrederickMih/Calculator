@@ -18,4 +18,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '100', next: '200', operation: '+' }, '+').total,
     ).not.toEqual('3');
   });
+
+  it('should subtract next number from the total', () => {
+    expect(
+      calculate({ total: '5', next: '1', operation: '-' }, '-').total,
+    ).toEqual('4');
+  });
 });
