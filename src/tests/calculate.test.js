@@ -12,4 +12,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '2', next: '-6', operation: '+' }, '+').total,
     ).toEqual('-4');
   });
+
+  it('falsy sum', () => {
+    expect(
+      calculate({ total: '100', next: '200', operation: '+' }, '+').total,
+    ).not.toEqual('3');
+  });
 });
