@@ -36,4 +36,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '10', next: '7', operation: 'x' }, 'x').total,
     ).toEqual('70');
   });
+
+  it('should compute falsy multiplication', () => {
+    expect(
+      calculate({ total: '4', next: '4', operation: 'x' }, 'x').total,
+    ).not.toEqual('1');
+  });
 });
