@@ -31,7 +31,7 @@ Calculator built with react.
 
 ### Deployment
 
-Demo [Heroku](https://math-magician12.herokuapp.com/).
+This is the Live version of the application [Heroku](https://calculator-math-magician-site.herokuapp.com/app).
 
 ## Authors
 
