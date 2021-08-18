@@ -8,10 +8,7 @@
 
 .app {
   max-width: 700px;
-  box-shadow:
-    rgba(120, 9, 131, 2) 0 54px 55px,
-    rgba(126, 16, 126, 0.12) 0 -12px 30px,
-    rgba(218, 15, 236, 0.12) 0 4px 6px,
-    rgba(71, 7, 80, 2) 0 12px 13px,
-    rgba(73, 4, 70, 0.09) 0 -3px 5px;
+  box-shadow: rgba(120, 9, 131, 2) 0 54px 55px,
+    rgba(126, 16, 126, 0.12) 0 -12px 30px, rgba(218, 15, 236, 0.12) 0 4px 6px,
+    rgba(71, 7, 80, 2.5) 0 12px 13px, rgba(73, 4, 70, 0.09) 0 -3px 5px;
 }
