@@ -60,3 +60,14 @@ describe('Testing arithmetic operations', () => {
     ).toEqual('1');
   });
 });
+
+describe('test other math operations', () => {
+  it('(AC) sign', () => {
+    expect(
+      calculate({ total: '5000', next: '599', operation: '÷' }, 'AC').total,
+    ).toBeFalsy();
+    expect(
+      calculate({ total: '77', next: '99', operation: '÷' }, 'AC').next,
+    ).toBeFalsy();
+  });
+});
