@@ -42,4 +42,16 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '4', next: '4', operation: 'x' }, 'x').total,
     ).not.toEqual('1');
   });
+
+  it('should compute division', () => {
+    expect(
+      calculate({ total: '20', next: '2', operation: '÷' }, '÷').total,
+    ).toEqual('10');
+  });
+
+  it('calculates incorrect division', () => {
+    expect(
+      calculate({ total: '88', next: '9', operation: '÷' }, '÷').total,
+    ).not.toEqual('1');
+  });
 });
