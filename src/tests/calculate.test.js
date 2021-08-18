@@ -85,4 +85,10 @@ describe('test other math operations', () => {
       calculate({ total: '77', next: null, operation: null }, '%').total,
     ).toEqual(0.77);
   });
+
+  it("test '.' operator", () => {
+    expect(
+      calculate({ total: '5', next: '3', operation: null }, '.').total,
+    ).not.toEqual('5.3');
+  });
 });
