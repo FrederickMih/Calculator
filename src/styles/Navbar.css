@@ -23,23 +23,8 @@ a {
   font-size: 1.2rem;
 }
 
-/* .menu-logo {
-  height: 5vmin;
-  pointer-events: none;
-} */
-
 @media (prefers-reduced-motion: no-preference) {
   .menu-logo {
     animation: App-logo-spin infinite 5s linear;
   }
 }
-
-/* @keyframes menu-logo {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-} */

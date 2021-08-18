@@ -1,19 +1,19 @@
 import calculate from '../logic/calulate';
 
 describe('Testing arithmetic operations', () => {
-  it('sum up', () => {
+  it('calculate sum', () => {
     expect(
       calculate({ total: '10', next: '11', operation: '+' }, '+').total,
     ).toEqual('21');
   });
 
-  it('negate sum', () => {
+  it(' should calculate sum with a negative number', () => {
     expect(
       calculate({ total: '2', next: '-6', operation: '+' }, '+').total,
     ).toEqual('-4');
   });
 
-  it('falsy sum', () => {
+  it('should calculate incorrect sum', () => {
     expect(
       calculate({ total: '100', next: '200', operation: '+' }, '+').total,
     ).not.toEqual('3');
@@ -25,7 +25,7 @@ describe('Testing arithmetic operations', () => {
     ).toEqual('4');
   });
 
-  it('should compute incorect subtraction', () => {
+  it('should compute incorrect subtraction', () => {
     expect(
       calculate({ total: '7', next: '1', operation: '-' }, '-').total,
     ).not.toEqual('3');
@@ -90,5 +90,16 @@ describe('test other math operations', () => {
     expect(
       calculate({ total: '5', next: '3', operation: null }, '.').total,
     ).not.toEqual('5.3');
+    expect(
+      calculate({ total: '55', next: '-33.', operation: '÷' }, '.').next,
+    ).not.toEqual('-33..');
+  });
+  it("check '.' sign", () => {
+    expect(
+      calculate({ total: '55', next: null, operation: null }, '.').total,
+    ).toEqual('55.');
+    expect(
+      calculate({ total: '55', next: '-33', operation: '÷' }, '.').next,
+    ).toEqual('-33.');
   });
 });
