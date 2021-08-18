@@ -28,7 +28,7 @@ describe('aritmetic operations', () => {
   });
   it('should compute falsy division', () => {
     expect(JSON.stringify(operate(20, 2, '÷'))).not.toEqual(
-      JSON.stringify('5')
+      JSON.stringify('5'),
     );
   });
 });
