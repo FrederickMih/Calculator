@@ -17,4 +17,7 @@ describe('aritmetic operations', () => {
       JSON.stringify('-5'),
     );
   });
+  it('should multiply', () => {
+    expect(JSON.stringify(operate(2, 3, 'x'))).toEqual(JSON.stringify('6'));
+  });
 });
