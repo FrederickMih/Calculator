@@ -3,7 +3,7 @@ import operate from '../logic/operate';
 describe('aritmetic operations', () => {
   it('should sum', () => {
     expect(JSON.stringify(operate(5, 6, '+'))).toStrictEqual(
-      JSON.stringify('11')
+      JSON.stringify('11'),
     );
   });
   it('calculate falsy sum', () => {
@@ -11,5 +11,10 @@ describe('aritmetic operations', () => {
   });
   it('should subtract', () => {
     expect(JSON.stringify(operate(10, -5, '-'))).toEqual(JSON.stringify('15'));
+  });
+  it('compute falsy subtraction', () => {
+    expect(JSON.stringify(operate(4, 2, '-'))).not.toEqual(
+      JSON.stringify('-5'),
+    );
   });
 });
