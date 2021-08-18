@@ -24,4 +24,10 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '5', next: '1', operation: '-' }, '-').total,
     ).toEqual('4');
   });
+
+  it('should compute incorect subtraction', () => {
+    expect(
+      calculate({ total: '7', next: '1', operation: '-' }, '-').total,
+    ).not.toEqual('3');
+  });
 });
