@@ -54,4 +54,9 @@ describe('Testing arithmetic operations', () => {
       calculate({ total: '88', next: '9', operation: '÷' }, '÷').total,
     ).not.toEqual('1');
   });
+  it('should test equality', () => {
+    expect(
+      calculate({ total: '5', next: '5', operation: '÷' }, '=').total,
+    ).toEqual('1');
+  });
 });
