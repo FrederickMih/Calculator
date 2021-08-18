@@ -67,7 +67,16 @@ describe('test other math operations', () => {
       calculate({ total: '5000', next: '599', operation: '÷' }, 'AC').total,
     ).toBeFalsy();
     expect(
-      calculate({ total: '77', next: '99', operation: '÷' }, 'AC').next,
+      calculate({ total: '797', next: '99', operation: '÷' }, 'AC').next,
     ).toBeFalsy();
+  });
+
+  it("test '+/-' operator", () => {
+    expect(
+      calculate({ total: '-60', next: null, operation: null }, '+/-').total,
+    ).toEqual('60');
+    expect(
+      calculate({ total: '55', next: '33', operation: '÷' }, '+/-').next,
+    ).toEqual('-33');
   });
 });
