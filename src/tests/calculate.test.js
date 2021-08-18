@@ -79,4 +79,10 @@ describe('test other math operations', () => {
       calculate({ total: '55', next: '33', operation: '÷' }, '+/-').next,
     ).toEqual('-33');
   });
+
+  it('test (%) sign', () => {
+    expect(
+      calculate({ total: '77', next: null, operation: null }, '%').total,
+    ).toEqual(0.77);
+  });
 });
