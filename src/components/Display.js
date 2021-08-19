@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../styles/Display.css';
 
-function Display(props) {
+const Display = (props) => {
   const { result } = props;
   return (
-    <div>
-      <h2>{result}</h2>
+    <div className="app-display">
+      <h2 style={{ textAlign: 'right', fontSize: '3rem', marginRight: '1rem' }}>
+        {result}
+      </h2>
     </div>
   );
-}
+};
 
 Display.propTypes = {
   result: PropTypes.string,

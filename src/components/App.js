@@ -1,43 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import '../App.css';
 import calculate from '../logic/calulate';
+import '../styles/App.css';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
+const App = () => {
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
-    this.handleClick = this.handleClick.bind(this);
+  const handleClick = (btnName) => {
+    const result = calculate({ total, next, operation }, btnName);
+    setTotal(result.total);
+    setNext(result.next);
+    setOperation(result.operation);
+  };
+
+  let currentResult = total;
+  if (next) {
+    currentResult = next;
+  }
+  if (currentResult === null) {
+    currentResult = '0';
   }
 
-  handleClick(btnName) {
-    const calDataObj = calculate(this.state, btnName);
-    this.setState(calDataObj);
-  }
-
-  render() {
-    const { total, next } = this.state;
-    let currentResult = total;
-    if (next) {
-      currentResult = next;
-    }
-    if (currentResult === null) {
-      currentResult = '0';
-    }
-
-    return (
-      <>
+  return (
+    <div className="app-main">
+      <div className="app">
         <Display result={currentResult.toString()} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </>
-    );
-  }
-}
+        <ButtonPanel clickHandler={handleClick} />
+      </div>
+      <h3 className="fred">Fred’s Calculator</h3>
+    </div>
+  );
+};
 
 export default App;

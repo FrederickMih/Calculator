@@ -1,0 +1,30 @@
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid gray;
+  background: orange;
+  color: white;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 15rem;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .menu-logo {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
