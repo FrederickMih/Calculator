@@ -1,6 +1,6 @@
 # Calculator
 
-## Description
+### Description
 
 Calculator built with react.
 
@@ -21,9 +21,9 @@ Calculator built with react.
 * Run `npm install` in your terminal to install all dependencies (you will need Node.js installed on your machine); 
 * Run `npm start`; 
 
-## Screenshots
+# Screenshots
 
-![](src/images/screenshootApp.png) ![](src/images/screenshootHome.png) ![](src/images/screenshootQuote.png)
+![](src/images/screenshootApp.png) `<br>` ![](src/images/screenshootHome.png) ![](src/images/screenshootQuote.png)
 
 # Testing
 * Please run test using the command:
