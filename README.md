@@ -20,10 +20,13 @@ Calculator built with react.
 * Switch to the main directory of project using cd; 
 * Run `npm install` in your terminal to install all dependencies (you will need Node.js installed on your machine); 
 * Run `npm start`; 
-
 # Screenshots
 
-![](src/images/screenshootApp.png) `<br>` ![](src/images/screenshootHome.png) ![](src/images/screenshootQuote.png)
+![](src/images/screenshootApp.png) 
+
+![](src/images/screenshootHome.png) 
+
+![](src/images/screenshootQuote.png)
 
 # Testing
 * Please run test using the command:
